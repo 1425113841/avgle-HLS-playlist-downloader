@@ -40,6 +40,7 @@
 			let r = avglehpdPreDownload({playlist});
 			filename = (r && r.filename) || filename;
 		}
+		log("avgle playlist:\r\n"+ playlist);
 		let a = d.querySelector('.ahpd-download');
 		a.href = URL.createObjectURL(new Blob([playlist],{type: "application/x-mpegURL"}));
 		a.setAttribute("download",filename);
@@ -131,7 +132,7 @@
 								log("decryptURI:\n",newOptions.decryptURI.toString());
 								loginfo("decrypting uri in playlist");
 								playlist = decryptPlaylist(playlist, newOptions);
-								log("decrypted playlist:\n"+ playlist);
+								//log("decrypted playlist:\n"+ playlist);
 								info("decrypted playlist successfully");
 								downloadPlaylist(playlist, "avgle.m3u8");
 							}
