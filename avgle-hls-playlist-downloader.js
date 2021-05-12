@@ -40,6 +40,7 @@
 			let r = avglehpdPreDownload({playlist});
 			filename = (r && r.filename) || filename;
 		}
+		log("avgle playlist:\r\n"+ playlist);
 		let a = d.querySelector('.ahpd-download');
 		a.href = URL.createObjectURL(new Blob([playlist],{type: "application/x-mpegURL"}));
 		a.setAttribute("download",filename);
