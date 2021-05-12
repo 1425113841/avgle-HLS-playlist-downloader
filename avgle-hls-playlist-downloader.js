@@ -132,7 +132,7 @@
 								log("decryptURI:\n",newOptions.decryptURI.toString());
 								loginfo("decrypting uri in playlist");
 								playlist = decryptPlaylist(playlist, newOptions);
-								log("decrypted playlist:\n"+ playlist);
+								log("decrypted playlist:\r\n"+ playlist);
 								info("decrypted playlist successfully");
 								downloadPlaylist(playlist, "avgle.m3u8");
 							}
